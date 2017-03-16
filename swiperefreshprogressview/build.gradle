@@ -1,4 +1,10 @@
+def versionCodeName = '1.0.RC1'
+
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.github.sourcerebels'
+version = versionCodeName
 
 android {
     compileSdkVersion 25
@@ -8,7 +14,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName versionCodeName
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

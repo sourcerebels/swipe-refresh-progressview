@@ -45,7 +45,7 @@ public class SwipeRefreshProgressView extends RelativeLayout {
         swipeRefreshError.setVisibility(GONE);
     }
 
-    public void showErrorMessage(@StringRes int message) {
+    public void showErrorMessage(CharSequence message) {
         errorMessage.setText(message);
         show();
         swipeRefreshError.setVisibility(VISIBLE);

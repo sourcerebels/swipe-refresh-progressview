@@ -9,7 +9,7 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.List;
 
-public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyRecyclerViewHolder> {
+class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyRecyclerViewHolder> {
 
     private final List<String> items = Arrays.asList("item 1", "item 2", "item 3", "item 4",
             "item 5", "item 6", "item 7", "item 8", "item 9", "item 10", "item 11", "item 12",
@@ -34,7 +34,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     static class MyRecyclerViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView title;
+        private final TextView title;
 
         MyRecyclerViewHolder(View itemView) {
             super(itemView);

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SwipeRefreshProgressView</string>
+    <string name="error_message">There was an error with your request\nPull to refresh</string>
 </resources>

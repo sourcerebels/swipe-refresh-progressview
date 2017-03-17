@@ -3,6 +3,8 @@
 
 View that I use in my projects that combines a ProgressBar for displaying progress, a TextView for displaying an error message and a SwipeRefreshLayout to refresh data when error occurs.
 
+![Demo Gif](https://media.giphy.com/media/l0Iy3TyUzwV2fXtLi/giphy.gif)
+
 ## Download
 
 Add it in your root build.gradle at the end of repositories:

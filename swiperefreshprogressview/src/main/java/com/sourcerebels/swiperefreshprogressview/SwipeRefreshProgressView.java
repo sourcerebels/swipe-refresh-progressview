@@ -3,6 +3,7 @@ package com.sourcerebels.swiperefreshprogressview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v4.widget.TextViewCompat;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -78,7 +79,8 @@ public class SwipeRefreshProgressView extends RelativeLayout {
                 int attribute = styleable[attrIndex];
                 switch (attribute) {
                     case android.R.attr.textAppearance:
-                        errorMessage.setTextAppearance(context, a.getResourceId(attrIndex, 0));
+                        TextViewCompat.setTextAppearance(errorMessage,
+                                a.getResourceId(attrIndex, 0));
                         break;
                 }
 

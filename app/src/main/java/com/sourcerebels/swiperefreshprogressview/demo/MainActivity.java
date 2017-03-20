@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         progressView.showProgress();
+
+        swipeRefreshLayout.setColorSchemeResources(R.color.red, R.color.green, R.color.blue);
+        progressView.setColorSchemeResources(R.color.red, R.color.green, R.color.blue);
         refresh();
     }
 

@@ -49,6 +49,10 @@ public class SwipeRefreshProgressView extends RelativeLayout {
         swipeRefreshError.setOnRefreshListener(listener);
     }
 
+    public void setColorSchemeResources(int... colorResId) {
+        swipeRefreshError.setColorSchemeResources(colorResId);
+    }
+
     private void show() {
         swipeRefreshError.setRefreshing(false);
         setVisibility(VISIBLE);

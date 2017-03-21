@@ -24,7 +24,7 @@ Add the dependency at your module's build.gradle:
 
 ```groovy
 dependencies {
-    compile 'com.github.sourcerebels:swipe-refresh-progressview:1.0.RC3'
+    compile 'com.github.sourcerebels:swipe-refresh-progressview:1.0.RC4'
 }
 ```
 

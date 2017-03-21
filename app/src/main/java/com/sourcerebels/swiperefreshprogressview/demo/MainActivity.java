@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void refresh() {
+        progressView.showProgress();
         new WaitAndHideProgressViewTask(progressView, swipeRefreshLayout, showError).execute();
         showError = !showError;
     }

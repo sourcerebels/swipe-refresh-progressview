@@ -37,7 +37,7 @@ class WaitAndHideProgressViewTask extends AsyncTask<Void, Void, Void> {
         SwipeRefreshProgressView progressView = progressRef.get();
         SwipeRefreshLayout swipeRefreshLayout = swipeRefreshLayoutRef.get();
         if (progressView != null && swipeRefreshLayout != null) {
-            Log.d("MainActivity", "onPostExecute: " + showError);
+            Log.d("WaitAndHideTask", "onPostExecute: " + showError);
             if (showError) {
                 progressView.showErrorMessage(
                         progressView.getContext().getString(R.string.error_message));

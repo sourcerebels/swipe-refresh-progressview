@@ -1,4 +1,4 @@
-def versionCodeName = '1.0.RC1'
+def versionCodeName = '1.0.RC4'
 
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'

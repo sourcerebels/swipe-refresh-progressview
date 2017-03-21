@@ -33,16 +33,17 @@ public class SwipeRefreshProgressView extends RelativeLayout {
     }
 
     public void showProgress() {
-        show();
-        progressBar.setVisibility(VISIBLE);
-        swipeRefreshError.setVisibility(GONE);
+        if (swipeRefreshError.getVisibility() == VISIBLE) {
+            swipeRefreshError.setRefreshing(true);
+        }
+        //By default progress bar is showing. And it will show only first time.
     }
 
     public void showErrorMessage(CharSequence message) {
-        show();
+        swipeRefreshError.setRefreshing(false);
+        setVisibility(VISIBLE);
         errorMessage.setText(message);
         swipeRefreshError.setVisibility(VISIBLE);
-        swipeRefreshError.setRefreshing(false);
         progressBar.setVisibility(GONE);
     }
 
@@ -54,15 +55,11 @@ public class SwipeRefreshProgressView extends RelativeLayout {
         swipeRefreshError.setColorSchemeResources(colorResId);
     }
 
-    private void show() {
-        swipeRefreshError.setRefreshing(false);
-        setVisibility(VISIBLE);
-    }
-
     private void initialize(Context context, AttributeSet attrs) {
         inflate(context, R.layout.view_swipe_refresh_progress, this);
         progressBar = (ProgressBar) findViewById(R.id.srp_progress_bar);
         swipeRefreshError = (SwipeRefreshLayout) findViewById(R.id.srp_swipe_refresh_error);
+        swipeRefreshError.setVisibility(GONE);
         errorMessage = (TextView) findViewById(R.id.srp_error_message);
 
         if (attrs == null) {
